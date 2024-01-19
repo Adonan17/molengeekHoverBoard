@@ -1,5 +1,7 @@
 let button = document.querySelector("button")
 let container = document.querySelector(".container");
+let input = document.querySelector("input");
+let title = document.querySelector(".request")
 
 function createGrid(rows, cols) {
     function random_color() {
@@ -8,8 +10,10 @@ function createGrid(rows, cols) {
     }
     
     container.style.display = 'grid'
-    button.style.display = 'none'
-    container.innerHTML = ""
+    title.style.display = 'none';
+    input.style.display = 'none';
+    button.style.display = 'none';
+    container.innerHTML = "";
     container.style.setProperty('--grid-rows', rows);
     container.style.setProperty('--grid-cols', cols);
     for (c = 0; c < (rows * cols); c++) {
@@ -19,18 +23,18 @@ function createGrid(rows, cols) {
 
     placeColor.forEach(item => {
         item.addEventListener("mouseover", () => {
-            let actuColor = random_color()
+            let actuColor = random_color();
             item.style.backgroundColor = `${actuColor}`;
             item.style.boxShadow = `0px 0px 22px ${actuColor}`;
-            item.style.transition = ''
+            item.style.transition = '';
         });
     });
 
     placeColor.forEach(item => {
         item.addEventListener("mouseout", () => {
             item.style.backgroundColor = '#1b263b';
-            item.style.boxShadow = 'none'
-            item.style.transition = '2s'
+            item.style.boxShadow = 'none';
+            item.style.transition = '2s';
         });
     });
 
@@ -40,10 +44,9 @@ function createGrid(rows, cols) {
 
 
 button.addEventListener('click', () => {
-    var input = parseInt(prompt("how many rows and columns do you want? (max 20)"))
-    if (input > 20){
-        alert("too high, stay under 20");
+    if (input.value > 20 || input.value < 1){
+        title.innerHTML = "stay between 1 and 20";
     } else {
-        createGrid(input, input);
+        createGrid(input.value, input.value);
     }
 })
