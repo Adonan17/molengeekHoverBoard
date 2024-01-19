@@ -19,7 +19,9 @@ function createGrid(rows, cols) {
 
     placeColor.forEach(item => {
         item.addEventListener("mouseover", () => {
-            item.style.backgroundColor = `${random_color()}`;
+            let actuColor = random_color()
+            item.style.backgroundColor = `${actuColor}`;
+            item.style.boxShadow = `0px 0px 22px ${actuColor}`;
             item.style.transition = ''
         });
     });
@@ -27,6 +29,7 @@ function createGrid(rows, cols) {
     placeColor.forEach(item => {
         item.addEventListener("mouseout", () => {
             item.style.backgroundColor = '#1b263b';
+            item.style.boxShadow = 'none'
             item.style.transition = '2s'
         });
     });

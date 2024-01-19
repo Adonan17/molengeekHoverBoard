@@ -46,6 +46,12 @@ button {
   border: 3px solid black;
   border-radius: 20px;
   font-weight: 600;
+  font-size: 15px;
+}
+
+button:active {
+  height: 40px;
+  width: 96px;
 }
 
 button:hover {
