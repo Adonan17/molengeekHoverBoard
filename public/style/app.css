@@ -1,0 +1,61 @@
+/* FONTS */
+@font-face {
+  font-family: "";
+  src: url("../assets/fonts/");
+}
+/* BODY */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0d1b2a;
+  flex-direction: column;
+  height: 100vh;
+  gap: 30px;
+}
+
+/* HEADER */
+/* RESPONSIVE */
+/* MAIN */
+.container {
+  display: none;
+  width: 700px;
+  height: 700px;
+  border: 1px solid black;
+  grid-template-rows: repeat(var(--grid-rows), 1fr);
+  grid-template-columns: repeat(var(--grid-cols), 1fr);
+}
+.container .gridItem {
+  min-width: 5px;
+  min-height: 5px;
+  background-color: #1b263b;
+  transition: 0.2s;
+  border: 1px solid black;
+}
+.container .gridItem:hover {
+  background-color: black;
+}
+
+button {
+  height: 50px;
+  width: 120px;
+  border: 3px solid black;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+/* FOOTER */
+/* RESPONSIVE */
+
+/*# sourceMappingURL=app.css.map */

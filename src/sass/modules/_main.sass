@@ -1,0 +1,38 @@
+/* MAIN */
+.container
+    display: none
+    width: 700px
+    height: 700px
+    border: 1px solid black
+    grid-template-rows: repeat(var(--grid-rows), 1fr)
+    grid-template-columns: repeat(var(--grid-cols), 1fr)
+    .gridItem
+        min-width: 5px
+        min-height: 5px
+        background-color: #1b263b
+        transition: 0.2s
+        border: 1px solid black
+    .gridItem:hover
+        background-color: black
+button
+    height: 50px
+    width: 120px
+    border: 3px solid black
+    border-radius: 20px
+    font-weight: 600
+button:hover
+    background-color: black
+    color: white
+    cursor: pointer
+
+/* RESPONSIVE */
+@media (max-width: 576px)
+
+
+@media (min-width: 577px) and (max-width: 768px)
+
+
+@media (min-width: 769px) and (max-width: 1024px)
+
+
+@media (min-width: 1025px)
